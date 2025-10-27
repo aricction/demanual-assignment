@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import {auth, provider} from '../../firebase';
 import { signInWithPopup } from "firebase/auth";
 import { useState } from "react";
