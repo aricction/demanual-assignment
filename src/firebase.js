@@ -1,18 +1,17 @@
-// Import the functions you need from the SDKs you need
+// firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCMKSpF4aiXjeOOB39btErQ1xaWMPEuKRQ",
-  authDomain: "demanual-assignment.firebaseapp.com",
-  projectId: "demanual-assignment",
-  storageBucket: "demanual-assignment.firebasestorage.app",
-  messagingSenderId: "685895847979",
-  appId: "1:685895847979:web:d1d1a57ddb0fac6dc11a6e",
-  measurementId: "G-S4PDY4R47F",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
